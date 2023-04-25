@@ -25,3 +25,17 @@ console.log(triangle.countSides);
 console.log(triangle.perimeter);
 console.log(triangle.isValid)
    
+
+class Square extends Polygon{
+    get area(){
+      if(this.isValid){
+      return this.sides[0]*this.sides[1];
+      }
+    }
+    get isValid(){
+      const [a,b,c,d]=this.sides;
+      return (a===b && a===c && a===d)
+    }
+    
+}
+const square = new Square( [ 5, 5, 5, 5 ] )
